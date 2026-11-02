@@ -57,6 +57,116 @@
     background: #1d4ed8;
 }
 
+.mageList {
+    box-sizing: border-box;
+    margin: 32px auto;
+    max-width: 700px;
+    text-align: left;
+    width: 100%;
+}
+
+.mageList ul {
+    margin: 0;
+    position: relative;
+    padding: 0;
+}
+
+.mageList ul::before {
+    background: #2563eb;
+    bottom: 0;
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    width: 3px;
+}
+
+.mageList li {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 56px;
+    padding: 8px 0;
+    position: relative;
+}
+
+.mage-year {
+    color: #4b5563;
+    font-weight: bold;
+    padding-right: 32px;
+    text-align: right;
+}
+
+.mageList li::before {
+    background: #2563eb;
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #2563eb;
+    content: "";
+    height: 12px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 12px;
+    z-index: 1;
+}
+
+.mageList li > :nth-child(2) {
+    padding-left: 32px;
+}
+
+.mage-entry {
+    cursor: help;
+    position: relative;
+}
+
+.mage-card {
+    align-items: center;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgb(0 0 0 / 18%);
+    display: flex;
+    gap: 12px;
+    left: 32px;
+    opacity: 0;
+    padding: 12px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-46%);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    visibility: hidden;
+    width: 240px;
+    z-index: 3;
+}
+
+.mage-card img {
+    height: 64px;
+    object-fit: contain;
+    width: 64px;
+}
+
+.mage-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0;
+}
+
+.mage-card small {
+    color: #4b5563;
+    line-height: 1.4;
+}
+
+.mage-entry:hover .mage-card,
+.mage-entry:focus-visible .mage-card {
+    opacity: 1;
+    transform: translateY(-50%);
+    visibility: visible;
+}
+
 @media (max-width: 700px) {
     .index-emblem-box-grid {
         grid-template-columns: 1fr;
@@ -65,11 +175,36 @@
     .index-emblem-box-grid .grid-box {
         min-height: 190px;
     }
+
+    .mageList li {
+        padding: 8px 0;
+    }
+
+    .mage-year {
+        padding-right: 24px;
+    }
+
+    .mageList li > :nth-child(2) {
+        padding-left: 24px;
+    }
+
+    .mage-card {
+        left: auto;
+        right: 0;
+        top: calc(100% + 8px);
+        transform: translateY(-4px);
+    }
+
+    .mage-entry:hover .mage-card,
+    .mage-entry:focus-visible .mage-card {
+        transform: translateY(0);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
     .grid-box img,
-    .index-emblem-box-grid .grid-box {
+    .index-emblem-box-grid .grid-box,
+    .mage-card {
         transition: none;
     }
 }
