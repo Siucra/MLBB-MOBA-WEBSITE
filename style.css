@@ -98,6 +98,14 @@
     background: #1d4ed8;
 }
 
+.emblem-card-image {
+    transition: transform 0.2s ease;
+}
+
+.emblem-card-image:hover {
+    transform: scale(1.2);
+}
+
 .mageList {
     box-sizing: border-box;
     margin: 32px auto;

@@ -1,66 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel = "stylesheet" href = "base.css"><!---for header and footer styling--->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <title>MLBB</title>
 </head>
-<body id="indexBody">
+<body id="indexBody" class="d-flex min-vh-100 flex-column">
 
-    <div class="page-container">
-        <nav class="navbar">
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MLBB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation"
+                aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <ul class="nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="listOfHeroes.html">List of Heroes</a></li>
-                <li><a href="gamemodes.html">Game Modes</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="AboutMe.html">About Me</a></li>
-            </ul>
-        </nav>
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gamemodes.html">Game Modes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="AboutMe.html">About Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        <h1>An ultimate guide to Mobile Legends: Bang Bang</h1>
+    <main class="container flex-grow-1 py-4 py-md-5 text-center">
+        <h1 class="display-5 fw-bold">An ultimate guide to Mobile Legends: Bang Bang</h1>
 
-        <div class="indexBanner">
-            <img src="" alt="MLBB Banner">
+        <div class="my-4">
+            <img class="img-fluid w-100 rounded bg-light" src="" alt="MLBB Banner">
         </div>
 
-        <div class="index-emblem-box-grid">
-            <a class="grid-box" href="mage.html">
-                <img src="img/mage_emblem_icon.png" alt="Mage">
-                <span class="grid-box-text">Mage</span>
-            </a>
-            <a class="grid-box" href="marksman.html">
-                <img src="img/marksman_emblem_icon.png" alt="Marksman">
-                <span class="grid-box-text">Marksman</span>
-            </a>
-            <a class="grid-box" href="fighter.html">
-                <img src="img/fighter_emblem_icon.png" alt="Fighter">
-                <span class="grid-box-text">Fighter</span>
-            </a>
-            <a class="grid-box" href="tank.html">
-                <img src="img/tank_emblem_icon.png" alt="Tank">
-                <span class="grid-box-text">Tank</span>
-            </a>
-            <a class="grid-box" href="assassin.html">
-                <img src="img/assassin_emblem_icon.png" alt="Assassin">
-                <span class="grid-box-text">Assassin</span>
-            </a>
-            <a class="grid-box" href="support.html">
-                <img src="img/support_emblem_icon.png" alt="Support">
-                <span class="grid-box-text">Support</span>
-            </a>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+            <div class="col">
+                <a class="card h-100 bg-primary text-white text-decoration-none" href="mage.html">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center gap-2">
+                        <img class="img-fluid emblem-card-image" width="80" height="80" src="img/mage_emblem_icon.png" alt="Mage">
+                        <span class="fw-semibold">Mage</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a class="card h-100 bg-primary text-white text-decoration-none" href="marksman.html">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center gap-2">
+                        <img class="img-fluid emblem-card-image" width="80" height="80" src="img/marksman_emblem_icon.png" alt="Marksman">
+                        <span class="fw-semibold">Marksman</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a class="card h-100 bg-primary text-white text-decoration-none" href="fighter.html">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center gap-2">
+                        <img class="img-fluid emblem-card-image" width="80" height="80" src="img/fighter_emblem_icon.png" alt="Fighter">
+                        <span class="fw-semibold">Fighter</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a class="card h-100 bg-primary text-white text-decoration-none" href="tank.html">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center gap-2">
+                        <img class="img-fluid emblem-card-image" width="80" height="80" src="img/tank_emblem_icon.png" alt="Tank">
+                        <span class="fw-semibold">Tank</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a class="card h-100 bg-primary text-white text-decoration-none" href="assassin.html">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center gap-2">
+                        <img class="img-fluid emblem-card-image" width="80" height="80" src="img/assassin_emblem_icon.png" alt="Assassin">
+                        <span class="fw-semibold">Assassin</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a class="card h-100 bg-primary text-white text-decoration-none" href="support.html">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center gap-2">
+                        <img class="img-fluid emblem-card-image" width="80" height="80" src="img/support_emblem_icon.png" alt="Support">
+                        <span class="fw-semibold">Support</span>
+                    </div>
+                </a>
+            </div>
         </div>
-        <footer>
-            <p>Game not owned by me, all rights reserved to Moonton.</p>
-            <p><a href="https://github.com/Siucra/MLBB-MOBA-WEBSITE" target="_blank" rel="noopener noreferrer">Link to github repo</a></p>
-        </footer>
-    </div>
+    </main>
 
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-1">Game not owned by me, all rights reserved to Moonton.</p>
+        <p class="mb-0"><a class="link-light" href="https://github.com/Siucra/MLBB-MOBA-WEBSITE" target="_blank" rel="noopener noreferrer">Link to github repo</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
