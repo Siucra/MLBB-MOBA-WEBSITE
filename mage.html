@@ -1,79 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel = "stylesheet" href = "base.css"><!---for header and footer styling--->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/rank/star.png">
+    <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>MLBB</title>
+    <title>Mages</title>
 </head>
-<body id="mageBody">
+<body id="mageBody" class="d-flex min-vh-100 flex-column">
 
-    <div class="page-container">
-        <nav class="navbar">
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation"
+                aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <ul class="nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="listOfHeroes.html">List of Heroes</a></li>
-                <li><a href="gamemodes.html">Game Modes</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="AboutMe.html">About Me</a></li>
-            </ul>
-        </nav>
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gamemodes.html">Game Modes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="AboutMe.html">About Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        <h1>All about mages</h1>
-        <p>Mages are a class of hero in MLBB, they deal magic damage but are typically fragile. There are many different types of mages.</p>
+    <main class="container flex-grow-1 py-4 py-md-5">
+        <h1 class="display-5 fw-bold text-center">All about mages</h1>
+        <p class="lead text-center">Mages are a class of hero in MLBB, they deal magic damage but are typically fragile. There are many different types of mages.</p>
         <div class="mageList">
-            <h2>List of all mages released in chronological order, starting from 2016 up to 2026</h2>
+            <h2 class="h3 mb-4">List of all mages released in chronological order, starting from 2016 up to 2026</h2>
             <ul>
-                <li><span class="mage-year">2016</span><div class="mage-entry" tabindex="0">Alice<div class="mage-card"><img src="img/heroIcon/alice.png" alt="Alice"><div class="mage-card-text"><strong>Alice</strong><small>"Queen of Blood", the oldest mage in the game with a rich lore and multiple art reworks. When played right, Alice can be an unstoppable force in the battlefield.</small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Nana<div class="mage-card"><img src="img/heroIcon/nana.png" alt="Nana"><div class="mage-card-text"><strong>Nana</strong><small>"The Sweet Leonin", the only hero that is capable of transforming enemies. Her poke ability and unique passive that gives her a second chance makes her a one-of-a-kind on the battlefield.</small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Eudora<div class="mage-card"><img src="img/heroIcon/eudora.png" alt="Eudora"><div class="mage-card-text"><strong>Eudora</strong><small>"The Lightning Weaver", a powerful mage with a strong presence. Known for her swift ability to control the battlefield and her devastating ultimate.</small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Gord<div class="mage-card"><img src="img/heroIcon/gord.png" alt="Gord"><div class="mage-card-text"><strong>Gord</strong><small>"The professor of the Mystics", who rides a floating board and delivers magic and true damage to his enemies.</small></div></div></div></li>
+                <li><span class="mage-year">2016</span><div class="mage-entry" data-background="img/herobackground/alice_background.png" tabindex="0">Alice<div class="mage-card"><img src="img/heroIcon/alice.png" alt="Alice"><div class="mage-card-text"><strong>Alice</strong><small>"Queen of Blood", the oldest mage in the game with a rich lore and multiple art reworks. When played right, Alice can be an unstoppable force in the battlefield.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/nana_background.png" tabindex="0">Nana<div class="mage-card"><img src="img/heroIcon/nana.png" alt="Nana"><div class="mage-card-text"><strong>Nana</strong><small>"The Sweet Leonin", the only hero that is capable of transforming enemies. Her poke ability and unique passive that gives her a second chance makes her a one-of-a-kind on the battlefield.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/eudora_background.png" tabindex="0">Eudora<div class="mage-card"><img src="img/heroIcon/eudora.png" alt="Eudora"><div class="mage-card-text"><strong>Eudora</strong><small>"The Lightning Weaver", a powerful mage with a strong presence. Known for her swift ability to control the battlefield and her devastating ultimate.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/gord_background.png" tabindex="0">Gord<div class="mage-card"><img src="img/heroIcon/gord.png" alt="Gord"><div class="mage-card-text"><strong>Gord</strong><small>"The professor of the Mystics", who rides a floating board and delivers magic and true damage to his enemies.</small></div></div></div></li>
                 
-                <li><span class="mage-year">2017</span><div class="mage-entry" tabindex="0">Aurora<div class="mage-card"><img src="img/heroIcon/aurora.png" alt="Aurora"><div class="mage-card-text"><strong>Aurora</strong><small></small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Vexana<div class="mage-card"><img src="img/heroIcon/vexana.png" alt="Vexana"><div class="mage-card-text"><strong>Vexana</strong><small></small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Harley<div class="mage-card"><img src="img/heroIcon/harley.png" alt="Harley"><div class="mage-card-text"><strong>Harley</strong><small></small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Odette<div class="mage-card"><img src="img/heroIcon/odette.png" alt="Odette"><div class="mage-card-text"><strong>Odette</strong><small></small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Zhask<div class="mage-card"><img src="img/heroIcon/zhask.png" alt="Zhask"><div class="mage-card-text"><strong>Zhask</strong><small></small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Pharsa<div class="mage-card"><img src="img/heroIcon/pharsa.png" alt="Pharsa"><div class="mage-card-text"><strong>Pharsa</strong><small></small></div></div></div></li>
+                <li><span class="mage-year">2017</span><div class="mage-entry" data-background="img/herobackground/aurora_background.png" tabindex="0">Aurora<div class="mage-card"><img src="img/heroIcon/aurora.png" alt="Aurora"><div class="mage-card-text"><strong>Aurora</strong><small>"The Frost Queen", a powerful mage with a strong presence. Known for her swift ability to control the fight and her devastating ultimate.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/vexana_background.png" tabindex="0">Vexana<div class="mage-card"><img src="img/heroIcon/vexana.png" alt="Vexana"><div class="mage-card-text"><strong>Vexana</strong><small>The Necromancer Queen commands cursed forces and summons the undead to overwhelm her enemies.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/harley_background.png" tabindex="0">Harley<div class="mage-card"><img src="img/heroIcon/harley.png" alt="Harley"><div class="mage-card-text"><strong>Harley</strong><small>The Magic Mathematician is a clever young mage who uses cards, portals, and explosive tricks in battle.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/odette_background.png" tabindex="0">Odette<div class="mage-card"><img src="img/heroIcon/odette.png" alt="Odette"><div class="mage-card-text"><strong>Odette</strong><small>The Swan Princess uses enchanting melodies and elegant magic to control the battlefield.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/zhask_background.png" tabindex="0">Zhask<div class="mage-card"><img src="img/heroIcon/zhask.png" alt="Zhask"><div class="mage-card-text"><strong>Zhask</strong><small>The Planes Dominator is an alien ruler who calls upon his Nightmaric Spawn to invade the battlefield.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/pharsa._background.png" tabindex="0">Pharsa<div class="mage-card"><img src="img/heroIcon/pharsa.png" alt="Pharsa"><div class="mage-card-text"><strong>Pharsa</strong><small>The Wings of Vengeance is a powerful aerial mage who rains long-range spells upon her foes.</small></div></div></div></li>
 
-                <li><span class="mage-year">2018</span><div class="mage-entry" tabindex="0">Kagura<div class="mage-card"><img src="img/heroIcon/kagura.png" alt="Kagura"><div class="mage-card-text"><strong>Kagura</strong><small>"The Onmyouji Master", The radiant bloom of her Seimei umbrella delivers a deadly blow to her opponents.</small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Cyclops<div class="mage-card"><img src="img/heroIcon/cyclops.png" alt="Cyclops"><div class="mage-card-text"><strong>Cyclops</strong><small>"The starsoul Magician" who has his eye on you with is ranged combo attack will have you dead before you see him.</small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Lunox<div class="mage-card"><img src="img/heroIcon/lunox.png" alt="Lunox"><div class="mage-card-text"><strong>Lunox</strong><small>"The Twilight Goddess" The first mage of her type to have 2 different combinations depending on her playstyle, attack and defense.</small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Harith<div class="mage-card"><img src="img/heroIcon/harith.png" alt="Harith"><div class="mage-card-text"><strong>Harith</strong><small>"The Time Traveler" A quick-witted apprentice of magix </small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Valir<div class="mage-card"><img src="img/heroIcon/valir.png" alt="Valir"><div class=" mage-card-text"><strong>Valir</strong><small></small></div></div></div></li>
+                <li><span class="mage-year">2018</span><div class="mage-entry" data-background="img/herobackground/kagura_background.png" tabindex="0">Kagura<div class="mage-card"><img src="img/heroIcon/kagura.png" alt="Kagura"><div class="mage-card-text"><strong>Kagura</strong><small>"The Onmyouji Master", The radiant bloom of her Seimei umbrella delivers a deadly blow to her opponents.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/cyclops_background.png" tabindex="0">Cyclops<div class="mage-card"><img src="img/heroIcon/cyclops.png" alt="Cyclops"><div class="mage-card-text"><strong>Cyclops</strong><small>"The starsoul Magician" who has his eye on you with is ranged combo attack will have you dead before you see him.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/lunox_background.png" tabindex="0">Lunox<div class="mage-card"><img src="img/heroIcon/lunox.png" alt="Lunox"><div class="mage-card-text"><strong>Lunox</strong><small>"The Twilight Goddess" The first mage of her type to have 2 different combinations depending on her playstyle, attack and defense.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/harith_background.png" tabindex="0">Harith<div class="mage-card"><img src="img/heroIcon/harith.png" alt="Harith"><div class="mage-card-text"><strong>Harith</strong><small>"The Time Traveler" A quick-witted apprentice of magix </small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/valir_background.png" tabindex="0">Valir<div class="mage-card"><img src="img/heroIcon/valir.png" alt="Valir"><div class=" mage-card-text"><strong>Valir</strong><small>The Son of Flames wields destructive fire magic and fights to master the power within him.</small></div></div></div></li>
 
-                <li><span class=" mage-year">2019</span><div class=" mage-entry" tabindex="0">Kimmy<div class=" mage-card"><img src="img/heroIcon/kimmy.png" alt="Kimmy"><div class="mage-card-text"><strong></strong><small></small>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Esmeralda<div class="mage-card"><img src="img/heroIcon/esmeralda.png" alt="Esmeralda"><div class="mage-card-text"><strong></strong><small></small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Guinevere<div class="mage-card"><img src="img/heroIcon/guinevere.png" alt="Guinevere"><div class="mage-card-text"><strong></strong><small></small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Lylia<div class="mage-card"><img src="img/heroIcon/lylia.png" alt="Lylia"><div class="mage-card-text"><strong></strong><small></small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Bane<div class="mage-card"><img src="img/heroIcon/bane.png" alt="Bane"><div class="mage-card-text"><strong></strong><small></small></div></div></div></li>
+                <li><span class="mage-year">2019</span><div class="mage-entry" data-background="img/herobackground/kimmy_background.png" tabindex="0">Kimmy<div class="mage-card"><img src="img/heroIcon/kimmy.png" alt="Kimmy"><div class="mage-card-text"><strong>Kimmy</strong><small>The Chemical Ranger combines science and combat training with a spray gun that fires while she moves.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/change_background.png" tabindex="0">Chang'e<div class="mage-card"><img src="img/heroIcon/change.png" alt="Chang'e"><div class="mage-card-text"><strong>Chang&#39;e</strong><small>The Moon Palace Immortal is a playful mage who uses moon magic and a rabbit companion to bombard her enemies.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" tabindex="0">Esmeralda<div class="mage-card"><img src="img/heroIcon/esmeralda.png" alt="Esmeralda"><div class="mage-card-text"><strong>Esmeralda</strong><small>The Astrologer manipulates shields and starlit magic to absorb enemy defenses.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/guinevere_background.png" tabindex="0">Guinevere<div class="mage-card"><img src="img/heroIcon/guinevere.png" alt="Guinevere"><div class="mage-card-text"><strong>Guinevere</strong><small>The Magic Swordswoman blends aristocratic grace with powerful jumps and spell-enhanced attacks.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/lylia_background.png" tabindex="0">Lylia<div class="mage-card"><img src="img/heroIcon/lylia.png" alt="Lylia"><div class="mage-card-text"><strong>Lylia</strong><small>The Little Witch uses magical bombs and her Shadow Energy to confuse enemies and escape danger.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/bane_background.png" tabindex="0">Bane<div class="mage-card"><img src="img/heroIcon/bane.png" alt="Bane"><div class="mage-card-text"><strong>Bane</strong><small>The Lord of the Seven Seas is a pirate captain who uses rum, cannon fire, and crushing tide magic.</small></div></div></div></li>
 
-                <li><span class="mage-year">2020</span><div class="mage-entry" tabindex="0">Cecilion<div class="mage-card"><img src="img/heroIcon/cecilion.png" alt="Cecilion"><div class="mage-card-text"><strong></strong><small></small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Luo Yi<div class="mage-card"><img src="img/heroIcon/luoyi.png" alt="Luo Yi"><div class="mage-card-text"><strong></strong><small></small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Vale<div class="mage-card"><img src="img/heroIcon/vale.png" alt="Vale"><div class="mage-card-text"><strong></strong><small></small></div></div></div></li>
+                <li><span class="mage-year">2020</span><div class="mage-entry" data-background="img/herobackground/cecilion_background.png" tabindex="0">Cecilion<div class="mage-card"><img src="img/heroIcon/cecilion.png" alt="Cecilion"><div class="mage-card-text"><strong>Cecilion</strong><small>The Embrace of Night is a refined blood demon who casts powerful spells and protects his beloved Carmilla.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/luoyi_background.png" tabindex="0">Luo Yi<div class="mage-card"><img src="img/heroIcon/luoyi.png" alt="Luo Yi"><div class="mage-card-text"><strong>Luo Yi</strong><small>The Yin-yang Geomancer commands the opposing forces of Yin and Yang to manipulate enemies and allies.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/vale_background.png" tabindex="0">Vale<div class="mage-card"><img src="img/heroIcon/vale.png" alt="Vale"><div class="mage-card-text"><strong>Vale</strong><small>The Windtalker controls the wind with precise spells and shares a long rivalry with Valir.</small></div></div></div></li>
 
-                <li><span class="mage-year">2021</span><div class="mage-entry" tabindex="0">Yve<div class="mage-card"><img src="img/heroIcon/yve.png" alt="Yve"><div class="mage-card-text"><strong></strong><small></small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Aamon<div class="mage-card"><img src="img/heroIcon/aamon.png" alt="Aamon"><div class="mage-card-text"><strong></strong><small></small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Valentina<div class="mage-card"><img src="img/heroIcon/valentina.png" alt="Valentina"><div class="mage-card-text"><strong></strong><small></small></div></div></div></li>
+                <li><span class="mage-year">2021</span><div class="mage-entry" data-background="img/herobackground/yve_background.png" tabindex="0">Yve<div class="mage-card"><img src="img/heroIcon/yve.png" alt="Yve"><div class="mage-card-text"><strong>Yve</strong><small>The Astrophysicist is an alien guardian who channels cosmic energy to stop the Swarm.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/aamon_background.png" tabindex="0">Aamon<div class="mage-card"><img src="img/heroIcon/aamon.png" alt="Aamon"><div class="mage-card-text"><strong>Aamon</strong><small>The Duke of Shards is a masked assassin who uses enchanted armor and fragments to vanish and strike.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/valentina_background.png" tabindex="0">Valentina<div class="mage-card"><img src="img/heroIcon/valentina.png" alt="Valentina"><div class="mage-card-text"><strong>Valentina</strong><small>The Prophetess of the Night can borrow the ultimate abilities of her enemies through forbidden magic.</small></div></div></div></li>
 
-                <li><span class="mage-year">2022</span><div class="mage-entry" tabindex="0">Xavier<div class="mage-card"><img src="img/heroIcon/xavier.png" alt="Xavier"><div class="mage-card-text"><strong></strong><small></small></div></div></div></li>
-                <li><span class="mage-year"></span><div class="mage-entry" tabindex="0">Julian<div class="mage-card"><img src="img/heroIcon/julian.png" alt="Julian"><div class="mage-card-text"><strong></strong><small></small></div></div></div></li>
+                <li><span class="mage-year">2022</span><div class="mage-entry" data-background="img/herobackground/xavier_background.png" tabindex="0">Xavier<div class="mage-card"><img src="img/heroIcon/xavier.png" alt="Xavier"><div class="mage-card-text"><strong>Xavier</strong><small>The Defier of Light is a young Arbiter who fires long-range light magic at enemies from afar.</small></div></div></div></li>
+                <li><span></span><div class="mage-entry" data-background="img/herobackground/julian_background.png" tabindex="0">Julian<div class="mage-card"><img src="img/heroIcon/julian.png" alt="Julian"><div class="mage-card-text"><strong>Julian</strong><small>The Scarlet Hound is a cursed fighter who combines chained weapons and magic in flexible attacks.</small></div></div></div></li>
 
-                <li><span class="mage-year">2023</span><div class="mage-entry" tabindex="0">Novaria<div class="mage-card"><img src="img/heroIcon/novaria.png" alt="Novaria"><div class="mage-card-text"><strong></strong><small></small></div></div></div></li>
-                <li><span class="mage-year">2024</span><div class="mage-entry" tabindex="0">Zhuxin<div class="mage-card"><img src="img/heroIcon/zhuxin.png" alt="Zhuxin"><div class="mage-card-text"><strong></strong><small></small></div></div></div></li>       
-                <li><span class="mage-year">2025</span><div class="mage-entry" tabindex="0">Zeitan<div class="mage-card"><img src="img/heroIcon/zeitan.png" alt="Zeitan"><div class="mage-card-text"><strong></strong><small></small></div></div></div></li>     
+                <li><span class="mage-year">2023</span><div class="mage-entry" data-background="img/herobackground/novaria_background.png" tabindex="0">Novaria<div class="mage-card"><img src="img/heroIcon/novaria.png" alt="Novaria"><div class="mage-card-text"><strong>Novaria</strong><small>The Star Rebel is a celestial wanderer who fires star-powered attacks across great distances.</small></div></div></div></li>
+                <li><span class="mage-year">2024</span><div class="mage-entry" data-background="img/herobackground/zhuxin_background.png" tabindex="0">Zhuxin<div class="mage-card"><img src="img/heroIcon/zhuxin.png" alt="Zhuxin"><div class="mage-card-text"><strong>Zhuxin</strong><small>The Beacon of Spirits guides lanterns filled with souls and uses them to control the battlefield.</small></div></div></div></li>
+                <li><span class="mage-year">2025</span><div class="mage-entry" data-background="img/herobackground/zeitan_background.png" tabindex="0">Zeitan<div class="mage-card"><img src="img/heroIcon/zeitan.png" alt="Zeitan"><div class="mage-card-text"><strong>Zeitan</strong><small>Zeitan is a mysterious mage who channels formidable supernatural power against his enemies.</small></div></div></div></li>
             </ul>
         </div>
-        <footer>
-            <p>Game not owned by me, all rights reserved to Moonton.</p>
-            <p><a href="https://github.com/Siucra/MLBB-MOBA-WEBSITE" target="_blank" rel="github link">Link to github repo</a></p>
-        </footer>
-    </div>
+    </main>
 
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-1">Game not owned by me, all rights reserved to Moonton.</p>
+        <p class="mb-0"><a class="link-light" href="https://github.com/Siucra/MLBB-MOBA-WEBSITE" target="_blank" rel="noopener noreferrer">Link to github repo</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
