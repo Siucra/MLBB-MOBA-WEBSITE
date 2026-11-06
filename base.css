@@ -176,4 +176,76 @@ footer {
   .fighter-entry:focus-visible .fighter-card {
     transform: translateY(0);
   }
+
+  .tankList li {
+    padding: 8px 0;
+  }
+
+  .tank-year {
+    padding-right: 24px;
+  }
+
+  .tankList li > :nth-child(2) {
+    padding-left: 24px;
+  }
+
+  .tank-card {
+    left: auto;
+    right: 0;
+    top: calc(100% + 8px);
+    transform: translateY(-4px);
+  }
+
+  .tank-entry:hover .tank-card,
+  .tank-entry:focus-visible .tank-card {
+    transform: translateY(0);
+  }
+
+  .supportList li {
+    padding: 8px 0;
+  }
+
+  .support-year {
+    padding-right: 24px;
+  }
+
+  .supportList li > :nth-child(2) {
+    padding-left: 24px;
+  }
+
+  .support-card {
+    left: auto;
+    right: 0;
+    top: calc(100% + 8px);
+    transform: translateY(-4px);
+  }
+
+  .support-entry:hover .support-card,
+  .support-entry:focus-visible .support-card {
+    transform: translateY(0);
+  }
+
+  .assassinList li {
+    padding: 8px 0;
+  }
+
+  .assassin-year {
+    padding-right: 24px;
+  }
+
+  .assassinList li > :nth-child(2) {
+    padding-left: 24px;
+  }
+
+  .assassin-card {
+    left: auto;
+    right: 0;
+    top: calc(100% + 8px);
+    transform: translateY(-4px);
+  }
+
+  .assassin-entry:hover .assassin-card,
+  .assassin-entry:focus-visible .assassin-card {
+    transform: translateY(0);
+  }
 }

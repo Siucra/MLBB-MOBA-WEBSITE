@@ -74,6 +74,75 @@
     opacity: 1;
 }
 
+#tankBody {
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+#tankBody::before {
+    background-image: var(--tank-background);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+}
+
+#tankBody.tank-background-visible::before {
+    opacity: 1;
+}
+
+#supportBody {
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+#supportBody::before {
+    background-image: var(--support-background);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+}
+
+#supportBody.support-background-visible::before {
+    opacity: 1;
+}
+
+#assassinBody {
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+#assassinBody::before {
+    background-image: var(--assassin-background);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+}
+
+#assassinBody.assassin-background-visible::before {
+    opacity: 1;
+}
+
 #mageBody > * {
     position: relative;
     z-index: 1;
@@ -85,6 +154,21 @@
 }
 
 #fighterBody > * {
+    position: relative;
+    z-index: 1;
+}
+
+#tankBody > * {
+    position: relative;
+    z-index: 1;
+}
+
+#supportBody > * {
+    position: relative;
+    z-index: 1;
+}
+
+#assassinBody > * {
     position: relative;
     z-index: 1;
 }
@@ -550,10 +634,340 @@
     visibility: visible;
 }
 
+.tankList {
+    box-sizing: border-box;
+    margin: 32px auto;
+    max-width: 700px;
+    text-align: left;
+    width: 100%;
+}
+
+.tankList ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.tankList ul::before {
+    background: #d97706;
+    bottom: 0;
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    width: 3px;
+}
+
+.tankList li {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 56px;
+    padding: 8px 0;
+    position: relative;
+}
+
+.tank-year {
+    color: #4b5563;
+    font-weight: bold;
+    padding-right: 32px;
+    text-align: right;
+}
+
+.tankList li::before {
+    background: #d97706;
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #d97706;
+    content: "";
+    height: 12px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 12px;
+    z-index: 1;
+}
+
+.tankList li > :nth-child(2) {
+    padding-left: 32px;
+}
+
+.tank-entry {
+    cursor: help;
+    position: relative;
+}
+
+.tank-card {
+    align-items: center;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgb(0 0 0 / 18%);
+    display: flex;
+    gap: 12px;
+    left: 32px;
+    opacity: 0;
+    padding: 12px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-46%);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    visibility: hidden;
+    width: 240px;
+    z-index: 3;
+}
+
+.tank-card img {
+    height: 64px;
+    object-fit: contain;
+    width: 64px;
+}
+
+.tank-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tank-card small {
+    color: #4b5563;
+    line-height: 1.4;
+}
+
+.tank-entry:hover .tank-card,
+.tank-entry:focus-visible .tank-card {
+    opacity: 1;
+    transform: translateY(-50%);
+    visibility: visible;
+}
+
+.supportList {
+    box-sizing: border-box;
+    margin: 32px auto;
+    max-width: 700px;
+    text-align: left;
+    width: 100%;
+}
+
+.supportList ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.supportList ul::before {
+    background: #7c3aed;
+    bottom: 0;
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    width: 3px;
+}
+
+.supportList li {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 56px;
+    padding: 8px 0;
+    position: relative;
+}
+
+.support-year {
+    color: #4b5563;
+    font-weight: bold;
+    padding-right: 32px;
+    text-align: right;
+}
+
+.supportList li::before {
+    background: #7c3aed;
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #7c3aed;
+    content: "";
+    height: 12px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 12px;
+    z-index: 1;
+}
+
+.supportList li > :nth-child(2) {
+    padding-left: 32px;
+}
+
+.support-entry {
+    cursor: help;
+    position: relative;
+}
+
+.support-card {
+    align-items: center;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgb(0 0 0 / 18%);
+    display: flex;
+    gap: 12px;
+    left: 32px;
+    opacity: 0;
+    padding: 12px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-46%);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    visibility: hidden;
+    width: 240px;
+    z-index: 3;
+}
+
+.support-card img {
+    height: 64px;
+    object-fit: contain;
+    width: 64px;
+}
+
+.support-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.support-card small {
+    color: #4b5563;
+    line-height: 1.4;
+}
+
+.support-entry:hover .support-card,
+.support-entry:focus-visible .support-card {
+    opacity: 1;
+    transform: translateY(-50%);
+    visibility: visible;
+}
+
+.assassinList {
+    box-sizing: border-box;
+    margin: 32px auto;
+    max-width: 700px;
+    text-align: left;
+    width: 100%;
+}
+
+.assassinList ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.assassinList ul::before {
+    background: #b91c1c;
+    bottom: 0;
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    width: 3px;
+}
+
+.assassinList li {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 56px;
+    padding: 8px 0;
+    position: relative;
+}
+
+.assassin-year {
+    color: #4b5563;
+    font-weight: bold;
+    padding-right: 32px;
+    text-align: right;
+}
+
+.assassinList li::before {
+    background: #b91c1c;
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #b91c1c;
+    content: "";
+    height: 12px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 12px;
+    z-index: 1;
+}
+
+.assassinList li > :nth-child(2) {
+    padding-left: 32px;
+}
+
+.assassin-entry {
+    cursor: help;
+    position: relative;
+}
+
+.assassin-card {
+    align-items: center;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgb(0 0 0 / 18%);
+    display: flex;
+    gap: 12px;
+    left: 32px;
+    opacity: 0;
+    padding: 12px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-46%);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    visibility: hidden;
+    width: 240px;
+    z-index: 3;
+}
+
+.assassin-card img {
+    height: 64px;
+    object-fit: contain;
+    width: 64px;
+}
+
+.assassin-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.assassin-card small {
+    color: #4b5563;
+    line-height: 1.4;
+}
+
+.assassin-entry:hover .assassin-card,
+.assassin-entry:focus-visible .assassin-card {
+    opacity: 1;
+    transform: translateY(-50%);
+    visibility: visible;
+}
+
 @media (prefers-reduced-motion: reduce) {
     #mageBody::before,
     #marksmenBody::before,
-    #fighterBody::before {
+    #fighterBody::before,
+    #tankBody::before,
+    #supportBody::before,
+    #assassinBody::before {
         transition: none;
     }
 
@@ -562,7 +976,10 @@
     .rank-card-panel,
     .mage-card,
     .marksmen-card,
-    .fighter-card {
+    .fighter-card,
+    .tank-card,
+    .support-card,
+    .assassin-card {
         transition: none;
     }
 
