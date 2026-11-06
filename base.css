@@ -128,4 +128,52 @@ footer {
   .mage-entry:focus-visible .mage-card {
     transform: translateY(0);
   }
+
+  .marksmenList li {
+    padding: 8px 0;
+  }
+
+  .marksmen-year {
+    padding-right: 24px;
+  }
+
+  .marksmenList li > :nth-child(2) {
+    padding-left: 24px;
+  }
+
+  .marksmen-card {
+    left: auto;
+    right: 0;
+    top: calc(100% + 8px);
+    transform: translateY(-4px);
+  }
+
+  .marksmen-entry:hover .marksmen-card,
+  .marksmen-entry:focus-visible .marksmen-card {
+    transform: translateY(0);
+  }
+
+  .fighterList li {
+    padding: 8px 0;
+  }
+
+  .fighter-year {
+    padding-right: 24px;
+  }
+
+  .fighterList li > :nth-child(2) {
+    padding-left: 24px;
+  }
+
+  .fighter-card {
+    left: auto;
+    right: 0;
+    top: calc(100% + 8px);
+    transform: translateY(-4px);
+  }
+
+  .fighter-entry:hover .fighter-card,
+  .fighter-entry:focus-visible .fighter-card {
+    transform: translateY(0);
+  }
 }

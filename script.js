@@ -27,3 +27,43 @@ mageEntries.forEach((entry) => {
     entry.addEventListener("focus", showBackground);
     entry.addEventListener("blur", clearBackground);
 });
+
+const marksmenEntries = document.querySelectorAll(".marksmen-entry[data-background]");
+
+marksmenEntries.forEach((entry) => {
+    const background = entry.dataset.background;
+
+    const showBackground = () => {
+        document.body.style.setProperty("--marksmen-background", `url("${background}")`);
+        document.body.classList.add("marksmen-background-visible");
+    };
+
+    const clearBackground = () => {
+        document.body.classList.remove("marksmen-background-visible");
+    };
+
+    entry.addEventListener("mouseenter", showBackground);
+    entry.addEventListener("mouseleave", clearBackground);
+    entry.addEventListener("focus", showBackground);
+    entry.addEventListener("blur", clearBackground);
+});
+
+const fighterEntries = document.querySelectorAll(".fighter-entry[data-background]");
+
+fighterEntries.forEach((entry) => {
+    const background = entry.dataset.background;
+
+    const showBackground = () => {
+        document.body.style.setProperty("--fighter-background", `url("${background}")`);
+        document.body.classList.add("fighter-background-visible");
+    };
+
+    const clearBackground = () => {
+        document.body.classList.remove("fighter-background-visible");
+    };
+
+    entry.addEventListener("mouseenter", showBackground);
+    entry.addEventListener("mouseleave", clearBackground);
+    entry.addEventListener("focus", showBackground);
+    entry.addEventListener("blur", clearBackground);
+});
