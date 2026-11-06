@@ -1,5 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
 .indexBody {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -224,7 +229,9 @@
 }
 
 .ranked-emblem-box-grid .grid-box {
-    background: #2563eb;
+    animation: ranked-grid-gradient 4s ease infinite;
+    background: linear-gradient(120deg, #4C1D95, #6D28D9, #2E1065, #4C1D95);
+    background-size: 200% 200%;
     border-radius: 8px;
     color: white;
     display: grid;
@@ -269,13 +276,97 @@
     transform: scale(1.2);
 }
 
-.grid-box:hover,
-.grid-box:focus-visible {
-    background: #1d4ed8;
-}
-
 .emblem-card-image {
     transition: transform 0.2s ease;
+}
+
+@keyframes ranked-grid-gradient {
+    0%,
+    100% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.index-card-gradient {
+    background-image: none;
+    background-position: 0 50%;
+    background-size: 200% 200%;
+    transition: background-position 0.3s ease, transform 0.3s ease;
+}
+
+.index-card-gradient:hover,
+.index-card-gradient:focus-visible {
+    animation: index-card-gradient-shift 2s ease infinite;
+    transform: translateY(-2px);
+}
+
+.index-card-mage {
+    background-color: #3b82f6;
+}
+
+.index-card-marksman {
+    background-color: #eab308;
+}
+
+.index-card-fighter {
+    background-color: #b91c1c;
+}
+
+.index-card-tank {
+    background-color: #92400e;
+}
+
+.index-card-assassin {
+    background-color: #7e22ce;
+}
+
+.index-card-support {
+    background-color: #14b8a6;
+}
+
+.index-card-mage:hover,
+.index-card-mage:focus-visible {
+    background-image: linear-gradient(120deg, #2563eb, #7c3aed, #2563eb);
+}
+
+.index-card-marksman:hover,
+.index-card-marksman:focus-visible {
+    background-image: linear-gradient(120deg, #eab308, #f97316, #eab308);
+}
+
+.index-card-fighter:hover,
+.index-card-fighter:focus-visible {
+    background-image: linear-gradient(120deg, #b91c1c, #f97316, #b91c1c);
+}
+
+.index-card-tank:hover,
+.index-card-tank:focus-visible {
+    background-image: linear-gradient(120deg, #92400e, #d97706, #92400e);
+}
+
+.index-card-assassin:hover,
+.index-card-assassin:focus-visible {
+    background-image: linear-gradient(120deg, #7e22ce, #db2777, #7e22ce);
+}
+
+.index-card-support:hover,
+.index-card-support:focus-visible {
+    background-image: linear-gradient(120deg, #0f766e, #06b6d4, #0f766e);
+}
+
+@keyframes index-card-gradient-shift {
+    0%,
+    100% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 .emblem-card-image:hover {
@@ -973,6 +1064,8 @@
 
     .grid-box img,
     .index-emblem-box-grid .grid-box,
+    .index-card-gradient,
+    .ranked-emblem-box-grid .grid-box,
     .rank-card-panel,
     .mage-card,
     .marksmen-card,
@@ -980,6 +1073,7 @@
     .tank-card,
     .support-card,
     .assassin-card {
+        animation: none;
         transition: none;
     }
 

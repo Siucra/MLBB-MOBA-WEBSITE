@@ -1,13 +1,3 @@
-const navToggle = document.querySelector(".nav-toggle");
-const nav = document.querySelector(".nav");
-
-if (navToggle && nav) {
-    navToggle.addEventListener("click", () => {
-        const isOpen = nav.classList.toggle("nav-open");
-        navToggle.setAttribute("aria-expanded", isOpen);
-    });
-}
-
 const mageEntries = document.querySelectorAll(".mage-entry[data-background]");
 
 mageEntries.forEach((entry) => {

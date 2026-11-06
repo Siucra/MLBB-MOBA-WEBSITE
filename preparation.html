@@ -1,64 +1,65 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="base.css">
     <link rel="icon" type="image/png" href="img/rank/star.png">
     <link rel="stylesheet" href="style.css">
     <title>Preparation</title>
 </head>
-<body id="indexBody" class="d-flex min-vh-100 flex-column">
+<body id="indexBody" class="flex min-h-screen flex-col">
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation"
-                aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNavigation">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gamemodes.html">Game Modes</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="preparation.html">Preparation</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white shadow-sm">
+        <nav class="mx-auto flex min-h-16 max-w-6xl items-center gap-6 px-5 py-3 md:px-8" aria-label="Primary">
+            <a href="index.html" class="shrink-0 text-xl font-bold tracking-tight text-slate-900 no-underline">MLBB<span class="text-red-600">.</span></a>
+            <input type="checkbox" id="site-menu" class="peer sr-only" aria-label="Toggle navigation menu">
+            <label for="site-menu" class="ml-auto flex cursor-pointer flex-col gap-1.5 rounded-lg p-2 text-slate-700 hover:bg-slate-100 md:hidden" aria-label="Toggle navigation menu">
+                <span class="block h-0.5 w-6 bg-current"></span>
+                <span class="block h-0.5 w-6 bg-current"></span>
+                <span class="block h-0.5 w-6 bg-current"></span>
+            </label>
+            <ul class="absolute left-0 right-0 top-full hidden list-none flex-col gap-1 border-b border-slate-200 bg-white p-4 shadow-lg peer-checked:flex md:static md:flex md:flex-row md:items-center md:gap-1 md:border-0 md:bg-transparent md:p-0 md:shadow-none">
+                <li><a class="block rounded-lg px-4 py-2 text-sm font-medium text-slate-700 no-underline transition-colors hover:bg-red-50 hover:text-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600" href="index.html">Home</a></li>
+                <li><a class="block rounded-lg px-4 py-2 text-sm font-medium text-slate-700 no-underline transition-colors hover:bg-red-50 hover:text-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600" href="gamemodes.html">Game Modes</a></li>
+                <li><a class="block rounded-lg px-4 py-2 text-sm font-medium text-slate-700 no-underline transition-colors hover:bg-red-50 hover:text-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600" href="preparation.html">Preparation</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <main class="container flex-grow-1 py-4 py-md-5 text-center">
-        <h1 class="display-5 fw-bold">Preparation for your battle</h1>
+    <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-8 text-center md:px-8 md:py-12">
+        <h1 class="text-4xl font-bold">Preparation for your battle</h1>
         <p>Before you start a match, it's important to prepare your hero with the right emblems, talents and equipment to gain an advantage over your opponents.</p>
 
-        <h2 class="display-5 fw-bold">Emblems & Talents</h2>
+        <h2 class="text-4xl font-bold">Emblems & Talents</h2>
         <p>Emblems are hero upgrades that give extra bonuses and effects. You can pick your emblem set in the preparation tab or during the hero pick phase. There are currently 7 types of emblems, each with its own bonuses.</p>
         <p>Talents come in two kinds: standard talents and core talents. They give your hero extra effects, so the right setup can give you an edge. You can choose two standard talents and one core talent. There are currently 16 types of standard talents and 8 types of core talents, each with its own bonuses.</p>
        
         <div class="emblem_talentsBanner my-4">
-            <video class="img-fluid w-100 rounded bg-light" autoplay muted loop playsinline preload="auto"
+            <video class="w-full rounded bg-slate-100" autoplay muted loop playsinline preload="auto"
                 controlslist="nodownload noplaybackrate" disablepictureinpicture
                 aria-label="Mobile Legends emblem *+& talents banner">
                 <source src="img/videos/emblem.mp4" type="video/mp4">
             </video>
         </div>
 
-        <h2 class="display-5 fw-bold">Equipment</h2>
+        <h2 class="text-4xl font-bold">Equipment</h2>
         <p>Also known as an item, is an enhancement to a hero's abilities that can be purchased in a match using gold. Using the shop interface the equipment can be obtained at the top right corner. Each player can keep up to six pieces of equipment.</p>
         <p>Most equipment gives heroes bonuses. Some boost a hero's stats, while others grant special abilities. Bonus attributes raise a hero's stats and stack if you buy the same item more than once. Unique attributes also raise stats, but only one copy of the effect applies per piece of equipment, no matter how many you buy. Unique passives are always active while the item is equipped, like a hero's passive skill. Unique actives work like hero skills: tap the equipment icon next to your hero skills to use them, then wait for the cooldown to end before using them again.</p>
 
        <div class="equipmentBanner my-4">
-            <video class="img-fluid w-100 rounded bg-light" autoplay muted loop playsinline preload="auto"
+            <video class="w-full rounded bg-slate-100" autoplay muted loop playsinline preload="auto"
                 controlslist="nodownload noplaybackrate" disablepictureinpicture
                 aria-label="Mobile Legends equipment banner">
                 <source src="img/videos/equipment.mp4" type="video/mp4">
             </video>
         </div>
 
-        <h2 class="display-5 fw-bold">Builds</h2>
+        <h2 class="text-4xl font-bold">Builds</h2>
         <p>Using the information from the previous sections, you can create effective builds for your hero. A build is a combination of preset equipment and talents that work together to provide a specific playstyle or strategy. You can either create your own build for your hero or use the default build provided by the game, or alternatively use builds from other players. Its good practice to have a few different builds ready for different situations.</p>
         <div class="buildsBanner my-4">
-            <video class="img-fluid w-100 rounded bg-light" autoplay muted loop playsinline preload="auto"
+            <video class="w-full rounded bg-slate-100" autoplay muted loop playsinline preload="auto"
                 controlslist="nodownload noplaybackrate" disablepictureinpicture
                 aria-label="Mobile Legends builds banner">
                 <source src="img/videos/builds.mp4" type="video/mp4">
@@ -66,11 +67,26 @@
         </div>
     </main>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p class="mb-1">Game not owned by me, all rights reserved to Moonton.</p>
-        <p class="mb-0"><a class="link-light" href="https://github.com/Siucra/MLBB-MOBA-WEBSITE" target="_blank" rel="noopener noreferrer">Link to github repo</a></p>
+    <footer class="border-t border-slate-200 bg-white px-4 py-5 text-slate-900 shadow-sm sm:px-6 md:px-8 md:py-6 lg:px-20">
+        <div class="mx-auto max-w-7xl text-center">
+            <div class="space-y-2 text-center">
+                <p class="text-sm md:text-base">This is a fanpage of MLBB. I do not own the game.</p>
+            </div>
+        </div>
+
+        <div class="mx-auto mt-5 flex max-w-7xl flex-col items-center justify-center gap-3 border-t border-slate-200 pt-4 text-center md:mt-6">
+            <p class="order-2 text-xs text-slate-500 sm:text-sm md:order-1">&copy; 2026 MLBB fanpage</p>
+            <div class="order-1 flex gap-5 md:order-2 md:gap-6">
+                <a href="https://github.com/Siucra/MLBB-MOBA-WEBSITE" class="text-slate-700 hover:text-red-700" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" />
+                    </svg>
+                </a>
+            </div>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
